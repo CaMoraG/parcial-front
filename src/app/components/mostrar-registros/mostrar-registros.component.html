@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Número de contratos: {{ contratos.length }}</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Identificador</th>
+          <th>Valor</th>
+          <th>Nombre Contratante</th>
+          <th>Documento Contratante</th>
+          <th>Nombre Contratista</th>
+          <th>Documento Contratista</th>
+          <th>Fecha Inicial</th>
+          <th>Fecha Final</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contrato of contratos">
+          <td>{{ contrato.identificador }}</td>
+          <td>{{ contrato.valor }}</td>
+          <td>{{ contrato.nombreContratante }}</td>
+          <td>{{ contrato.documentoContratante }}</td>
+          <td>{{ contrato.nombreContratista }}</td>
+          <td>{{ contrato.documentoContratista }}</td>
+          <td>{{ contrato.fechaInicial }}</td>
+          <td>{{ contrato.fechaFinal }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="navigateToCreateContrato()">Crear contrato</button>
+  </div>
